@@ -8,10 +8,10 @@ import (
 
 func TestGetAPIKey(t *testing.T) {
 	const testPrefix = "ApiKey"
-	const testToken  = "1234"
+	const testToken = "1234"
 
 	testHeader := http.Header{}
-	testHeader.Set("Authorization", testPrefix +" "+testToken)
+	testHeader.Set("Authorization", testPrefix+" "+testToken)
 
 	token, err := GetAPIKey(testHeader)
 	if err != nil {
